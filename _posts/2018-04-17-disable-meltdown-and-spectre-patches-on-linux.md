@@ -11,8 +11,10 @@ However, those patches significantly slowdown your computer.
 
 If you have offline computers that run only trusted software, you may want to disable those patches to regain performance lost. This article will show you how to disable those patches on Linux. [There is also an instruction for Windows][Windows Meltdown and Spectre].
 
+**Currently this article only covers the instructions to disable the Meltdown patch.**
+
 ### Check if Meltdown and Spectre patches are applied
-Run the following command as root:
+Run the following command:
 ``` sh
 grep . /sys/devices/system/cpu/vulnerabilities/*
 ```
@@ -37,17 +39,17 @@ GRUB_CMDLINE_LINUX="rd.lvm.lv=fedora/root rd.lvm.lv=fedora/swap rhgb quiet nopti
 Then regenerate the grub config file.
 If your OS is booted from legacy BIOS, run:
 ``` sh
-grub2-mkconfig -o /etc/grub2.cfg
+sudo grub2-mkconfig -o /etc/grub2.cfg
 ```
 Otherwise if your OS is booted from UEFI, run:
 ``` sh
-grub2-mkconfig -o /etc/grub2-efi.cfg
+sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 ```
 
 Lastly, reboot your computer.
 
 ### Verify if the patches are disabled
-Rerun the following command as root:
+Rerun the following command:
 ``` sh
 grep . /sys/devices/system/cpu/vulnerabilities/*
 ```
@@ -56,7 +58,7 @@ If successful, your output should be something like:
 ``` shspectre fedora
 /sys/devices/system/cpu/vulnerabilities/meltdown:Vulnerable
 /sys/devices/system/cpu/vulnerabilities/spectre_v1:Vulnerable
-/sys/devices/system/cpu/vulnerabilities/spectre_v2:Mitigation: Full generic retpoline
+/sys/devices/system/cpu/vulnerabilities/spectre_v2:Vulnerable
 ```
 
 ### Re-enable the patches
