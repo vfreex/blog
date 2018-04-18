@@ -31,3 +31,12 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # Added at 2018-04-18 10:58:05 +0800 by vfreex:
 gem "html-proofer", "~> 3.8"
+
+# Added at 2018-04-18 11:26:46 +0800 by vfreex:
+gem "nokogiri", "~> 1.8"
+
+# Added at 2018-04-18 11:32:42 +0800 by vfreex:
+gem "listen", "~> 3.1"
+
+# Added at 2018-04-18 11:41:57 +0800 by vfreex:
+gem "rake", "~> 12.3"
