@@ -11,3 +11,17 @@ sudo: false
 script:
   - bundle exec jekyll build
   - bundle exec rake test
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_0380117d5827_key -iv $encrypted_0380117d5827_iv
+    -in deploy/keys/prod_rsa.enc -out deploy/keys/prod_rsa -d
+  - chmod 600 deploy/keys/prod_rsa
+  - eval "$(ssh-agent -s)"
+  - ssh-add deploy/keys/prod_rsa
+  - echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after _site/*
+    $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  on:
+    branch: master
