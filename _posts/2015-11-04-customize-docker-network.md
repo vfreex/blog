@@ -2,8 +2,8 @@
 layout: post
 title:  "Customize Docker network"
 date:   2015-11-04 17:21:00 +0800
-categories:  linux docker
-tags: technology container
+categories: technology container
+tags: Linux Docker
 ---
 [Docker][] is an awesome software which makes use of Linux container
 to package dependencies for an application and isolate its runtime environment from the host machine.

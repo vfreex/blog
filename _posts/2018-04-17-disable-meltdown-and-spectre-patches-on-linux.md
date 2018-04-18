@@ -3,6 +3,7 @@ layout: post
 title: How to disable Meltdown and Spectre Patches on Linux
 date:   2018-04-17 17:00:00 +0800
 categories: technology security
+tags: Linux
 ---
 
 [Meltdown and Spectre][] are vulnerabilities in modern processors,

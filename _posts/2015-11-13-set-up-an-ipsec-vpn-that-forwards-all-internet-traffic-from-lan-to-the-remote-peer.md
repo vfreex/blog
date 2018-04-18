@@ -2,7 +2,8 @@
 layout: post
 title:  "Set up an IPSec VPN that forwards all Internet traffic from LAN to the remote peer"
 date:   2015-11-13 19:32:00 +0800
-categories: networking
+categories: technology networking
+tags: Linux VPN IPSec OpenWrt
 ---
 My [PS4][] has trouble connecting to PSN service these days. I suspect my ISP has blocked all traffic to oversea PSN servers.
 Fortunately there is an [OpenWrt][] router in my room, so that I can get through this kind of block by setting up a VPN connection to forward all traffic from my PS4 to my oversea VPS. Here is the expected connection solution:
