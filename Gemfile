@@ -40,3 +40,12 @@ gem "listen", "~> 3.1"
 
 # Added at 2018-04-18 11:41:57 +0800 by vfreex:
 gem "rake", "~> 12.3"
+
+# Added at 2018-04-19 16:25:28 +0800 by vfreex:
+gem "jekyll-sitemap", "~> 1.2"
+
+# Added at 2018-04-19 16:25:53 +0800 by vfreex:
+gem "jekyll-paginate", "~> 1.1"
+
+# Added at 2018-04-19 16:26:10 +0800 by vfreex:
+gem "jekyll-gist", "~> 1.5"
