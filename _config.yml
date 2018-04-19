@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is Yuxiang Zhu's blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-disqus_shortname: vfreex
+disqus_shortname: yuxiang-zhus-blog
 reading_time:     false
 words_per_minute: 200
 
@@ -73,7 +73,7 @@ sass:
   style: compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /posts/:categories/:title/
+permalink:   /posts/:categories/:title
 
 # Amount of post to show on home page
 paginate: 5
